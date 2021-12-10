@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- REQUIRED META -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="imgs/logo.png">
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.css">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- TITLE -->
+    <title>Pirates Bikes | الرئيسية</title>
+</head>
+
+<body>
+    <main>
+        <!-- PRELOADER -->
+        <div class="preloader">
+            <img src="imgs/logo.png" alt="">
+        </div>
+        <!-- BACKGROUND SECTION -->
+        <div class="main-bg"></div>
+        <!-- HEADER -->
+        <header>
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imgs/logo.png" alt="">
+                </a>
+                <span>LOST IT - GET IT BACK</span>
+            </div>
+        </header>
+        <!-- FORM -->
+        <section class="form-bg login-form">
+            <div class="form-title mt-2 mb-2">
+                <h3>تسجيل الدخول</h3>
+            </div>
+            <div class="social-buttons" dir="ltr">
+                <div class="facebook">
+                    <button type="button" class="btn btn-primary">FACEBOOK</button>
+                </div>
+                <div class="google">
+                    <button type="button" class="btn btn-light">GOOGLE</button>
+                </div>
+            </div>
+            <form action="" method="GET">
+                <div class="input">
+                    <div class="papa">
+                        <input id="email" class="email" type="email" name="email" placeholder="البريد الإلكتروني"
+                            autocomplete="none" required />
+                        <p id="emailmessage">رجاءاً بريد إلكتروني صحيح</p>
+                    </div>
+                    <div class="papa">
+                        <input id="psw" class="pass" type="password" name="pass" placeholder="كلمة السر" required />
+                        <p id="pswmessage">
+                            يجب ان تكون كلمة السر مكونة من 8 عناصر علي الاقل
+                            و حرف كبير و ارقام و رموز
+                        </p>
+                    </div>
+                </div>
+            </form>
+            <div class="checkbox">
+                <span>
+                    <label class="remember" for="check">تذكرني</label>
+                </span>
+                <span class="check">
+                    <input type="checkbox" id="check">
+                </span>
+            </div>
+            <button id="send" disabled href="home.html" role="button" class="btn submit btn-submit">SUBMIT</button>
+            <div class="lost-new mt-2 mb-2">
+                <p class="lost-pass">
+                    <a href="password-request.html">نسيت كلمة السر</a>
+                </p>
+                <p class="new-acc">
+                    <a href="sign-up.html" class="sign-up">ليس لديك حساب</a>
+                </p>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer">
+                <div class="left-side">
+                    <p>تم التصميم و البرمجة بواسطة
+                        <a href="https://www.facebook.com/omar.elmalek.5/">Omar Abdelatif</a>
+                    </p>
+                </div>
+                <div class="right-side">
+                    <p>All Copyrights Reserved <span> &copy;</span> Pirates Bikes</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <!-- BOOTSTRAP -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- CUSTOM JS -->
+    <script src="js/custom.js"></script>
+    <script>
+        const login = () => {
+            if (
+                email.classList.contains("good") &&
+                psw.classList.contains("good")
+            ) {
+                send.removeAttribute("disabled");
+            } else {
+                send.setAttribute("disabled", "disabled");
+            }
+        }
+        psw.addEventListener("keyup", (eo) => {
+            const regPassword = /(?=.{8,})/;
+            if (regPassword.test(psw.value)) {
+                psw.classList.add("good");
+                pswmessage.style.display = "none";
+            } else {
+                psw.classList.remove("good");
+                psw.classList.add("error");
+                pswmessage.style.display = "block";
+            }
+            login();
+        });
+        email.addEventListener("keyup", (eo) => {
+            const regEmail =
+                /[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/;
+            if (regEmail.test(email.value)) {
+                email.classList.add("good")
+                emailmessage.style.display = "none"
+            } else {
+                email.classList.remove("good")
+                email.classList.add("error")
+                emailmessage.style.display = "block"
+            }
+            login()
+        });
+    </script>
+</body>
+
+</html>

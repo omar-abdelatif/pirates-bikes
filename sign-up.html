@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- REQUIRED META -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="imgs/logo.png" />
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.css" />
+    <!-- CUSTOM STYLE -->  
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .papa input{
+            width: auto;
+        }
+    </style>
+    <!-- TITLE -->
+    <title>Pirates Bikes | SIGNUP</title>
+</head>
+
+<body>
+    <main>
+        <!-- PRELOADER -->
+        <div class="preloader">
+            <img src="imgs/logo.png" alt="" />
+        </div>
+        <!-- BACKGROUND SECTION -->
+        <div class="main-bg"></div>
+        <!-- HEADER -->
+        <header>
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imgs/logo.png" alt="" />
+                </a>
+                <span>LOST IT - GET IT BACK</span>
+            </div>
+        </header>
+        <!-- SIGNUP FORM -->
+        <section class="form-bg">
+            <div class="form-title">
+                <h3>تسجيل لأول مرة</h3>
+            </div>
+            <div class="social-buttons" dir="ltr">
+                <div class="facebook">
+                    <button type="button" class="btn btn-primary">
+                        FACEBOOK
+                    </button>
+                </div>
+                <div class="google">
+                    <button type="button" class="btn btn-light">
+                        GOOGLE
+                    </button>
+                </div>
+            </div>
+            <form action="register.php" method="post">
+                <div class="input">
+                    <div class="row">
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="papa">
+                                <input id="username" class="fname" type="text" name="username" placeholder="الإسم" autocomplete="none" required />
+                                <p id="usermessage">حد ادنى 3 عناصر</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="papa">
+                                <input id="email" class="email" type="email" name="email" placeholder="البريد الإلكتروني" autocomplete="none"
+                                    required />
+                                <p id="emailmessage">رجاءاً بريد إلكتروني صحيح</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="papa">
+                                <input id="psw" class="pass" type="password" name="pass" placeholder="كلمة السر" required />
+                                <p id="pswmessage">
+                                    يجب ان تكون كلمة السر مكونة من 8 عناصر علي الاقل
+                                    و حرف كبير و ارقام و رموز
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="papa">
+                                <input id="pswrepeat" class="repeat-password" type="password" name="repeatpass" placeholder="أعد كتابة كلمة السر"
+                                    required />
+                                <p id="repeatmessage">كلمة السر غير مطابقة</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="papa">
+                        <input id="phone" class="phone" type="tel" name="phone" placeholder="التلفون"
+                            autocomplete="none" required />
+                        <p id="phonemessage">رجاءاً أدخل رقم هاتف صحيح</p>
+                    </div>
+                    <div class="gender">
+                        <div class="sex">
+                            <label for="male">Male</label>
+                            <input type="radio" name="gender" id="male" value="m">
+                        </div>
+                        <div class="sex">
+                            <label for="female">Female</label>
+                            <input type="radio" name="gender" id="female" value="f">
+                        </div>
+                    </div>
+                    <input disabled id="createbtn" class="btn submit" type="submit" value="تسجيل" />
+                </div>
+            </form>
+            <div class="account">
+                <p class="have-acc">
+                    <a href="login.html" class="signin">لديك حساب</a>
+                </p>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer">
+                <div class="left-side">
+                    <p>
+                        تم التصميم و البرمجة بواسطة
+                        <a href="https://www.facebook.com/omar.elmalek.5/">Omar Abdelatif</a>
+                    </p>
+                </div>
+                <div class="right-side">
+                    <p>
+                        All Copyrights Reserved <span> &copy;</span> Pirates
+                        Bikes
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- BOOTSTRAP -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- CUSTOM JS -->
+        <script src="js/custom.js"></script>
+        <script>
+            const regBtn = () => {
+                if (
+                    username.classList.contains("good") &&
+                    psw.classList.contains("good") &&
+                    pswrepeat.classList.contains("good") &&
+                    phone.classList.contains("good")
+                ) {
+                    createbtn.removeAttribute("disabled");
+                } else {
+                    createbtn.setAttribute("disabled", "disabled");
+                }
+            };
+            username.addEventListener("keyup", (eo) => {
+                if (username.value.length >= 3) {
+                    username.classList.add("good");
+                    usermessage.style.display = "none";
+                } else {
+                    username.classList.remove("good");
+                    username.classList.add("error");
+                    usermessage.style.display = "block";
+                }
+                regBtn();
+            });
+            phone.addEventListener("keyup", (eo) => {
+                if (phone.value.length === 11) {
+                    phone.classList.add("good");
+                    phonemessage.style.display = "none";
+                } else {
+                    phone.classList.remove("good");
+                    phone.classList.add("error");
+                    phonemessage.style.display = "block";
+                }
+                regBtn();
+            });
+            psw.addEventListener("keyup", (eo) => {
+                const regPassword = /(?=.{8,})/;
+                if (regPassword.test(psw.value)) {
+                    psw.classList.add("good");
+                    pswmessage.style.display = "none";
+                } else {
+                    psw.classList.remove("good");
+                    psw.classList.add("error");
+                    pswmessage.style.display = "block";
+                }
+                regBtn();
+            });
+            pswrepeat.addEventListener("keyup", (eo) => {
+                if (pswrepeat.value === psw.value) {
+                    pswrepeat.classList.add("good");
+                    pswmessage.style.display = "none";
+                    repeatmessage.style.display = "none";
+                } else {
+                    pswrepeat.classList.remove("good");
+                    pswrepeat.classList.add("error");
+                    repeatmessage.style.display = "block";
+                }
+                regBtn();
+            });
+            email.addEventListener("keyup", (eo) => {
+                const regEmail =
+                /[\w-\.]+@([\w-]+\.)+[\w-]{2,4}/;
+                if (regEmail.test(email.value)) {
+                    email.classList.add("good")
+                    emailmessage.style.display = "none"
+                } else {
+                    email.classList.remove("good")
+                    email.classList.add("error")
+                    emailmessage.style.display = "block"
+                }
+            });
+        </script>
+    </main>
+</body>
+
+</html>

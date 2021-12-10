@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- REQUIRED META -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="imgs/logo.png" />
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.css" />
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- TITLE -->
+    <title>Pirates Bikes | SETTING</title>
+</head>
+
+<body>
+    <main>
+        <!-- PRELOADER -->
+        <div class="preloader">
+            <img src="imgs/logo.png" alt="" />
+        </div>
+        <!-- BACKGROUND SECTION -->
+        <div class="main-bg"></div>
+        <!-- SETTING -->
+        <section class="setting-area">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="topnav">
+                        <div class="setting-title">
+                            <p>الإعدادات</p>
+                        </div>
+                        <div class="back">
+                            <a href="profile.html">
+                                الرجوع للصفحة الشخصية
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="vertical-menu">
+                            <ul class="list">
+                                <a href="setting.html" class="profile active-admin">
+                                    <i class="fad fa-edit"></i>
+                                    <span>الملف الشخصي</span>
+                                    <i class="far fa-chevron-left"></i>
+                                </a>
+                                <a href="privacy.html" class="security">
+                                    <i class="fad fa-shield-alt"></i>
+                                    <span>إعدادات الأمان</span>
+                                    <i class="far fa-chevron-left"></i>
+                                </a>
+                                <a href="bike-setting.html" class="out">
+                                    <i class="fad fa-bicycle"></i>
+                                    <span>إعدادات الدراجة</span>
+                                    <i class="far fa-chevron-left"></i>
+                                </a>
+                                <a href="login.html" class="out">
+                                    <i class="fad fa-sign-out-alt"></i>
+                                    <span>تسجيل خروج</span>
+                                    <i class="far fa-chevron-left"></i>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="profile-setting">
+                            <div class="change-img">
+                                <img src="imgs/undraw_profile_pic_ic-5-t.svg" id="img" alt="" />
+                                <input type="file" name="upload" id="photo">
+                                <label for="photo" id="uploadBtn">تحميل</label>
+                            </div>
+                            <div class="change-form">
+                                <form action="" method="post">
+                                    <div class="form-group">
+                                        <input type="email" name="email" id="email" class="form-control"
+                                            placeholder="البريد الإلكتروني" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="password" id="password" class="form-control"
+                                            placeholder="كلمة المرور" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" name="confirm" id="confirm" class="form-control"
+                                            placeholder="تأكيد كلمة المرور" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="phone" id="phone" class="form-control"
+                                            placeholder="رقم الهاتف" />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="submit" value="SUBMIT" class="form-control setting-btn">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer">
+                <div class="left-side">
+                    <p>
+                        تم التصميم و البرمجة بواسطة
+                        <a href="https://www.facebook.com/omar.elmalek.5/">Omar Abdelatif</a>
+                    </p>
+                </div>
+                <div class="right-side">
+                    <p>
+                        All Copyrights Reserved <span> &copy;</span> Pirates
+                        Bikes
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- BOOTSTRAP -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- CUSTOM JS -->
+        <script src="js/custom.js"></script>
+        <script>
+            photo.addEventListener('change', function () {
+                const choosedFile = this.files[0];
+                if (choosedFile) {
+                    const reader = new FileReader();
+                    reader.addEventListener('load', function () {
+                        img.setAttribute('src', reader.result);
+                        img.setAttribute('height', 150);
+                    });
+                    reader.readAsDataURL(choosedFile);
+                }
+            });
+        </script>
+    </main>
+</body>
+
+</html>

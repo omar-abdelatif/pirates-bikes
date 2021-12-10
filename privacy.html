@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- REQUIRED META -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="imgs/logo.png" />
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.css" />
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .pass,
+        .repeat-password,
+        .btn-submit {
+            width: 100%;
+        }
+    </style>
+    <!-- TITLE -->
+    <title>Pirates Bikes | Privacy</title>
+</head>
+
+<body>
+    <main>
+        <!-- PRELOADER -->
+        <div class="preloader">
+            <img src="imgs/logo.png" alt="" />
+        </div>
+        <!-- BACKGROUND IMAGE -->
+        <div class="main-bg"></div>
+        <!-- PRIVACY -->
+        <section class="privacy">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="topnav">
+                        <div class="setting-title">
+                            <p>الخصوصية</p>
+                        </div>
+                        <div class="back">
+                            <a href="profile.html">
+                                الرجوع للصفحة الشخصية
+                                <i class="fas fa-arrow-left"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="vertical-menu">
+                            <ul class="list">
+                                <a href="setting.html" class="profile">
+                                    <i class="fad fa-edit"></i>
+                                    <span>الملف الشخصي</span>
+                                    <i class="far fa-chevron-left"></i>
+                                </a>
+                                <a href="privacy.html" class="security active-admin">
+                                    <i class="fad fa-shield-alt"></i>
+                                    <span>إعدادات الأمان</span>
+                                    <i class="far fa-chevron-left"></i>
+                                </a>
+                                <a href="bike-setting.html" class="out">
+                                    <i class="fad fa-bicycle"></i>
+                                    <span>إعدادات الدراجة</span>
+                                    <i class="far fa-chevron-left"></i>
+                                </a>
+                                <a href="login.html" class="out">
+                                    <i class="fad fa-sign-out-alt"></i>
+                                    <span>تسجيل خروج</span>
+                                    <i class="far fa-chevron-left"></i>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="userpassword">
+                            <div class="userTitle">
+                                <h4>تعديل كلمة السر</h4>
+                            </div>
+                            <div class="user-form">
+                                <form action="" method="post">
+                                    <div class="papa">
+                                        <input id="psw" class="pass" type="password" name="pass" placeholder="كلمة السر"
+                                            required />
+                                        <p id="pswmessage">
+                                            يجب ان تكون كلمة السر مكونة من 8 عناصر علي الاقل و
+                                            حرف كبير و ارقام و رموز
+                                        </p>
+                                    </div>
+                                    <div class="papa">
+                                        <input id="pswrepeat" class="repeat-password" type="password"
+                                            name="repeat-password" placeholder="أعد كتابة كلمة السر" required />
+                                        <p id="repeatmessage">كلمة السر غير مطابقة</p>
+                                    </div>
+                                    <input disabled id="subbtn" class="btn btn-submit" type="button" value="SUBMIT" />
+                                </form>
+                            </div>
+                            <div class="toast-success">
+                                <div class="toast-bg"></div>
+                                <div class="toast-body">
+                                    <div class="close">
+                                        <i class="far fa-times-circle"></i>
+                                    </div>
+                                    <div class="toast-title">
+                                        <i class="fal fa-check-circle"></i>
+                                    </div>
+                                    <div class="confirm">
+                                        <p>تم تغيير كلمة السر بنجاااااح</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer">
+                <div class="left-side">
+                    <p>
+                        تم التصميم و البرمجة بواسطة
+                        <a href="https://www.facebook.com/omar.elmalek.5/">Omar Abdelatif</a>
+                    </p>
+                </div>
+                <div class="right-side">
+                    <p>
+                        All Copyrights Reserved <span> &copy;</span> Pirates
+                        Bikes
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- BOOTSTRAP -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- CUSTOM JS -->
+        <script src="js/custom.js"></script>
+    </main>
+</body>
+
+</html>

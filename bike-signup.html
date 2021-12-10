@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- REQUIRED META -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="imgs/logo.png" />
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.css" />
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Pirates Bikes | SignUp Bike</title>
+</head>
+
+<body>
+    <main>
+        <!-- PRELOADER -->
+        <div class="preloader">
+            <img src="imgs/logo.png" alt="" />
+        </div>
+        <!-- BACKGROUND SECTION -->
+        <div class="main-bg"></div>
+        <!-- HEADER -->
+        <header>
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imgs/logo.png" alt="" />
+                </a>
+                <span>LOST IT - GET IT BACK</span>
+            </div>
+        </header>
+        <!-- SIGNUP FORM -->
+        <section class="form-bg">
+            <div class="form-title">
+                <h3>تسجيل للعجلة</h3>
+            </div>
+            <form action="" method="post" enctype="multipart/form-data">
+                <div class="input">
+                    <div class="papa">
+                        <input class="bike-type" id="biketype" type="text" name="bike type" placeholder="نوع العجلة"
+                            required />
+                        <p id="bikemessage">رجاءاً أكتب نوع صحيح</p>
+                    </div>
+                    <div class="papa">
+                        <input class="model" id="model" type="text" name="model" placeholder="الموديل" required />
+                        <p id="modelmessage">رجاءاً أكتب موديل صحيح</p>
+                    </div>
+                    <div class="papa">
+                        <input class="frame-number" id="framenumber" type="text" name="frame number"
+                            placeholder="رقم الكادر" required />
+                        <p id="framemessage">رجاءاً أدخل الرقم صحيح</p>
+                    </div>
+                    <input dir="ltr" id="addimg" class="img" placeholder="No File Chosen Yet" type="file" name="img"
+                        accept="image/*" multiple />
+                    <textarea class="mark" name="desc" id="bikedesc" placeholder="علامة مميزة ( إختياري )" cols="30"
+                        rows="2"></textarea>
+                    <div class="biketype">
+                        <div class="checkbox">
+                            <label for="mount">Mountain</label>
+                            <input type="radio" name="bike type" id="mount">
+                        </div>
+                        <div class="checkbox">
+                            <label for="hyp">Hyprid</label>
+                            <input type="radio" name="bike type" id="hyp">
+                        </div>
+                        <div class="checkbox">
+                            <label for="road">Road</label>
+                            <input type="radio" name="bike type" id="road">
+                        </div>
+                    </div>
+                    <input disabled class="btn submit" id="bikesub" type="button" value="تسجيل" />
+                </div>
+            </form>
+            <div class="bikeform" id="bikeform">
+                <div class="success-form" id="successform">
+                    <div class="close">
+                        <i class="far fa-times-circle"></i>
+                    </div>
+                    <div class="toast-title">
+                        <i class="fal fa-check-circle"></i>
+                    </div>
+                    <div class="confirm">
+                        <p>تم تسجيل الدراجة بنجاااااح</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer">
+                <div class="left-side">
+                    <p>
+                        تم التصميم و البرمجة بواسطة
+                        <a href="https://www.facebook.com/omar.elmalek.5/">Omar Abdelatif</a>
+                    </p>
+                </div>
+                <div class="right-side">
+                    <p>
+                        All Copyrights Reserved <span> &copy;</span> Pirates
+                        Bikes
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <!-- BOOTSTRAP -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- FONTAWESOME -->
+        <script src="js/pro.js"></script>
+        <!-- CUSTOM JS -->
+        <script src="js/custom.js"></script>
+        <script>
+            const bikeSignUp = (eo) => {
+                if (
+                    biketype.classList.contains("good") &&
+                    model.classList.contains("good") &&
+                    framenumber.classList.contains("good")
+                ) {
+                    bikesub.removeAttribute("disabled");
+                } else {
+                    bikesub.setAttribute("disabled", "disabled");
+                }
+            };
+            biketype.addEventListener("keyup", (eo) => {
+                if (biketype.value.length <= 10) {
+                    biketype.classList.add("good");
+                    bikemessage.style.display = "none";
+                } else {
+                    biketype.classList.remove("good");
+                    biketype.classList.add("error");
+                    bikemessage.style.display = "block";
+                }
+                bikeSignUp();
+            });
+            model.addEventListener("keyup", (eo) => {
+                if (model.value.length <= 10) {
+                    model.classList.add("good");
+                    modelmessage.style.display = "none";
+                } else {
+                    model.classList.remove("good");
+                    model.classList.add("error");
+                    modelmessage.style.display = "block";
+                }
+                bikeSignUp();
+            });
+            framenumber.addEventListener("keyup", (eo) => {
+                if (framenumber.value.length <= 10) {
+                    framenumber.classList.add("good");
+                    framemessage.style.display = "none";
+                } else {
+                    framenumber.classList.remove("good");
+                    framenumber.classList.add("error");
+                    framemessage.style.display = "block";
+                }
+                bikeSignUp();
+            })
+            bikesub.addEventListener("click", (eo) => {
+                successform.style.display = "block";
+                bikeform.style.display = "block";
+            })
+            close.addEventListener("click", (eo) => {
+                successform.style.display = "none";
+                bikeform.style.display = "none";
+            });
+            bikeform.addEventListener("click", (eo) => {
+                successform.style.display = "none";
+                bikeform.style.display = "none";
+            })
+        </script>
+    </main>
+</body>
+
+</html>

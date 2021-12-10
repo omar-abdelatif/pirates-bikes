@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <!-- REQUIRED META -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- FAVICON -->
+    <link rel="shortcut icon" href="imgs/logo.png" />
+    <!-- BOOTSTRAP -->
+    <link rel="stylesheet" href="css/bootstrap.rtl.css" />
+    <!-- FONTAWESOME -->
+    <link rel="stylesheet" href="css/all.css">
+    <!-- CUSTOM STYLE -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- TITLE -->
+    <title>Pirates Bikes | Profile</title>
+</head>
+
+<body>
+    <main>
+        <!-- PRELOADER -->
+        <div class="preloader">
+            <img src="imgs/logo.png" alt="" />
+        </div>
+        <!-- BACKGROUND IMAGE -->
+        <div class="main-bg"></div>
+        <!-- HEADER -->
+        <header>
+            <!-- LOGO -->
+            <div class="logo">
+                <a href="index.html">
+                    <img src="imgs/logo.png" alt="" />
+                </a>
+                <span>LOST IT - GET IT BACK</span>
+            </div>
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav m-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#">الرئيسية</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="bike-signup.html">سجل العجلة</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">تواصل معنا</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">من نحن</a>
+                            </li>
+                        </ul>
+                        <ul class="left-nav">
+                            <li>
+                                <a class="social" href="https://www.facebook.com/groups/PIRATES.BIKES/">
+                                    <i class="fab fa-facebook fa-3x"></i>
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <a class="login-icon pl-100" href="#" id="navbarDropdown" role="button" data-toggle="dropdown">
+                                    <i class="fad fa-user-circle fa-3x"></i>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li class="dropdown-item">
+                                        <a href="profile.html">الصفحة الشخصية</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="setting.html">الإعدادات</a>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <a href="login.html">تسجيل خروج</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <!-- PROFILE BODY -->
+        <section class="profile">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3">
+                        <div class="personal-data">
+                            <div class="img">
+                                <img id="profile" src="imgs/profile.svg" alt="profile photo">
+                            </div>
+                            <div class="profile-txt">
+                                <p class="username">
+                                    الإسم:
+                                    <span id="username"></span>
+                                </p>
+                                <p class="tel">
+                                    التلفون:
+                                    <span id="usertel"></span>
+                                </p>
+                                <p class="bike-kind">
+                                    نوع العجلة:
+                                    <span id="bikekind"></span>
+                                </p>
+                                <p class="bike-model">
+                                    الموديل:
+                                    <span id="bikemodel"></span>
+                                </p>
+                                <p class="bike-hrm">
+                                    النوع:
+                                    <span id="bikehrm"></span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="gallery">
+                            <div class="imgs-title">
+                                <p>معرض الصور</p>
+                            </div>
+                            <div class="imgs-container">
+                                <div class="row">
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="bike-img"></div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="bike-img"></div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="bike-img"></div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-6">
+                                        <div class="bike-img"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="status">
+                            <div class="bike-status">
+                                <p>الحالة:</p>
+                                <div class="selector">
+                                    <div id="selectFiled">
+                                        <p id="selectText">أختر حالة الدراجة</p>
+                                        <i id="arrowIcon" class="far fa-chevron-down"></i>
+                                    </div>
+                                    <ul id="list" class="hide">
+                                        <li id="options" class="options">
+                                            <p>Owned</p>
+                                        </li>
+                                        <li id="options" class="options">
+                                            <p>Stolen</p>
+                                        </li>
+                                        <li id="options" class="options">
+                                            <p>Sold</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="bike-qrcode">
+                                <div class="qrcode">
+                                    <img src="imgs/download.png" alt="scan qrcode">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- FOOTER -->
+        <footer>
+            <div class="footer">
+                <div class="left-side">
+                    <p>تم التصميم و البرمجة بواسطة
+                        <a href="https://www.facebook.com/omar.elmalek.5/">Omar Abdelatif</a>
+                    </p>
+                </div>
+                <div class="right-side">
+                    <p>All Copyrights Reserved <span> &copy;</span> Pirates Bikes</p>
+                </div>
+            </div>
+        </footer>
+        <!-- BOOTSTRAP -->
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <!-- FONTAWESOME -->
+        <script src="js/pro.js"></script>
+        <!-- CUSTOM JS -->
+        <script src="js/custom.js"></script>
+        <script>
+            selectFiled.onclick = function(){
+                list.classList.toggle("hide")
+                arrowIcon.classList.toggle("rotate")
+            }
+            for (option of options) {
+                option.onclick = function(){
+                    selectText.innerHTML = this.textContent
+                    list.classList.toggle("hide")
+                    arrowIcon.classList.toggle("rotate")
+                }
+            }
+        </script>
+    </main>
+</body>
+
+</html>
